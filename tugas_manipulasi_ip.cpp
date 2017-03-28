@@ -4,17 +4,15 @@
 */	
 
 #include <iostream> //input & output stream
-#include <sstream> //string converter
 
 using namespace std;
 
 
 int main()
 {
-    float ip[100], tertinggi=0, terendah=4, num, sum_ip=0;
+    float ip[100], tertinggi=0, terendah=4, sum_ip=0;
 	int lulus=0, tdk_lulus=0, error_kebawah=0, error_keatas=0;
 	int i=1, pembagi;
-	stringstream stream;
 	
 	cout<<"--------PROGRAM MANIPULASI DATA IP MAHASISWA-------"<<endl<<endl;
 	cout<<"==================================================="<<endl<<endl;
@@ -36,7 +34,7 @@ int main()
 			if (ip[i] < terendah){ terendah = ip[i]; }
 			
 			sum_ip+=ip[i];
-			pembagi	=	i;
+			pembagi	=	i; //pembagi dibatas atas dasar kelompok ip dalam range 1-4
 		}
 		else if(ip[i] < 0 || ip[i] > 4){
 			/* Pembatasan rentangan angka margin error 
@@ -55,7 +53,7 @@ int main()
 	
 	
 	float rata 		= (sum_ip/pembagi);
-	int jml_m		= i-2;
+	int jml_m		= i-2; //2 digunakan agar jumlah mahasiswa tidak termasuk terminator (-999)
 	int error		= error_kebawah + error_keatas;
 	
         
