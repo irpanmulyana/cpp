@@ -40,9 +40,15 @@ void pilihanA(){
 		cout<<" }\n\n";
 	
 	for(int ii=1; ii<=x; ii++){
-		if(z[ii] < min){ min = z[ii]; }
-		if(z[ii] == min){ sum_min+=ii; }
+		if(z[ii] < min){ min = z[ii];}
 		}
+		
+	for(int iii=1; iii<=x; iii++){
+		if(z[iii] == min){
+			int iv = 1;
+			sum_min+=iv; 
+		}
+		}	
 		
 		cout<<"Nilai Terendah: "<<min<<"\n\n";
 		cout<<"Jumlah Anggota dengan nilai Terendah: "<<sum_min<<"\n";	

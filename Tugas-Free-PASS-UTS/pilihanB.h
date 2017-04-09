@@ -40,8 +40,14 @@ void pilihanB(){
 		cout<<" }\n\n";
 	
 	for(int ii=1; ii<=x; ii++){
-		if(z[ii] > max){ max = z[ii]; }
-		if(z[ii] == max){ sum_max+=ii; }
+		if(z[ii] > max){ max = z[ii];}
+		}	
+		
+	for(int iii=1; iii<=x; iii++){
+		if(z[iii] == max){
+			int iv = 1;
+			sum_max+=iv; 
+		}
 		}
 		
 		cout<<"Nilai Tertinggi: "<<max<<"\n\n";
